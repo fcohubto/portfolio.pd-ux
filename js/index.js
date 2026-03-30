@@ -21,23 +21,22 @@ function updateNavbarShadow() {
 updateNavbarShadow();
 window.addEventListener("scroll", updateNavbarShadow, { passive: true });
 
-/* SMOOTH SCROLL */
+/* SMOOTH SCROLL MEJORADO */
 navLinks.forEach((link) => {
     link.addEventListener("click", function(e) {
-        const targetId = this.getAttribute("href");
-        if (!targetId || !targetId.startsWith("#")) return;
+        const href = this.getAttribute("href");
 
-        const target = document.querySelector(targetId);
-        if (!target) return;
-
-        e.preventDefault();
-
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-        closeMobileMenu();
+        // Caso 1: Es un ancla interna (ej: "#about")
+        if (href.startsWith("#")) {
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                closeMobileMenu();
+            }
+        } 
+        // Caso 2: Es un link a otra página con ancla (ej: "../index.html#about")
+        // No hacemos nada, dejamos que el navegador cambie de página normalmente.
     });
 });
 
