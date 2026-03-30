@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francisco Orellana | Lead Product Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo" aria-label="Inicio"><strong>fcoux</strong>.pd</a>
+            <nav class="nav-links desktop-nav" aria-label="Navegación principal">
+                <a href="#about">Resume</a>
+                <a href="#projects">Casos de Estudio</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb"></div>
+                    </div>
+                </button>
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <a href="#about">Resume</a>
+            <a href="#projects">Casos de Estudio</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="tag-primary tag" style="margin-bottom: 16px;">Product Designer</div>
+                <h1>Soluciones de producto con impacto en el negocio</h1>
+                <p class="hero-text">
+                    Especialista en <strong>SaaS, Fintech y Startups</strong>. Transformo hallazgos de investigación en arquitecturas escalables y sistemas de diseño bajo metodologías ágiles.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Casos de Estudio</a>
+                    <a href="#contact" class="btn btn-secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="resume-grid">
+                    <div class="resume-main">
+                        <h2 class="section-title">Visión Estratégica</h2>
+                        <p class="resume-intro">
+                            Product Designer con enfoque en el ciclo completo del producto y éxito probado en la optimización de procesos y métricas NPS.
+                        </p>
+                        <ul class="metrics">
+                            <li><strong>Eficiencia Operativa:</strong> Incremento del 80% en la entrega de valor en equipos multidisciplinarios.</li>
+                            <li><strong>Satisfacción (NPS):</strong> Elevación de NPS de 4 a 9 en sectores estratégicos de pago.</li>
+                            <li><strong>Arquitectura Escalable:</strong> Documentación y estandarización de más de 100 flujos transaccionales.</li>
+                        </ul>
+                        <div class="resume-actions">
+                            <a href="https://drive.google.com/file/d/1h4NdWSWmRlage9ZmfCMy37_K2PikKyfT/view?usp=sharing" class="btn btn-outline" target="_blank">Mostrar CV Completo</a>
+                        </div>
+                    </div>
+
+                    <aside class="resume-side" aria-label="Impacto en Cifras">
+                        <h2 class="hitos-title">Logros Clave</h2>
+                        <div class="hitos-grid">
+                            <article class="hito-card">
+                                <div>
+                                    <h3>30% Menos tiempo</h3><br>
+                                    <p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 4px;">Reducción en tiempos de pago en ecosistemas POS.</p>
+                                </div>
+                            </article>
+                            <article class="hito-card">
+                                <div>
+                                    <h3>8+ Fases de Journey</h3><br>
+                                    <p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 4px;">Creación de Journey Map integral para decisiones estratégicas.</p>
+                                </div>
+                            </article>
+                            <article class="hito-card">
+                                <div>
+                                    <h3>Handoff Optimizado</h3><br>
+                                    <p style="font-size: 0.9rem; color: var(--text-soft); margin-top: 4px;">Protocolos de delivery y estandarización con Dev y QA.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Casos de Estudio</h2>
+                <div class="projects">
+                    <article class="project-card">
+                        <a href="restaurante.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../media/restaurante.png" alt="Pago en Restaurantes" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag tag-primary">Transbank</span>
+                                    <span class="tag tag-secondary">Fintech</span>
+                                </div>
+                                <h3>Pago en Restaurantes</h3>
+                                <p class="project-description">Implementación de "División de cuentas" y mejora de experiencia en POS.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <a href="../html/ecosistema.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="../media/po.png" alt="Ecosistema POS" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag tag-primary">Transbank</span>
+                                    <span class="tag tag-secondary">Sistemas</span>
+                                </div>
+                                <h3>Ecosistema POS</h3>
+                                <p class="project-description">Homologación de la experiencia de pago nacional tras 30 años sin cambios.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <a href="../html/pj.html" class="project-card-link">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80" alt="Product Journey" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag tag-primary">Haulmer</span>
+                                    <span class="tag tag-secondary">SaaS</span>
+                                </div>
+                                <h3>Product Journey</h3>
+                                <p class="project-description">Creación de Product Joruney de al vida completa del producto POS.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section" id="contact" style="background: var(--surface-2);">
+            <div class="container">
+                <h2>¿Hablamos sobre tu próximo producto?</h2>
+                <p style="max-width: 600px; font-size: 1.125rem; margin: 0 auto 32px; color: var(--text-soft);">
+                    Disponible para consultorías y roles estratégicos <br> en equipos de alto rendimiento.
+                </p>
+                <a href="mailto:orellanav.francisco@gmail.com" class="btn btn-primary">Enviar Mensaje</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--line-separator); text-align: center;">
+        <div class="container">
+            <p style="color: var(--text-soft); font-size: 0.9rem; margin: 0;">
+                © 2026 Francisco Orellana — fcoux.pd. <br> Santiago, Chile.
+            </p>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

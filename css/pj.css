@@ -1,0 +1,204 @@
+/* ============================================================ 
+   PROYECTO: PRODUCT JOURNEY (LANDING DE CONSTRUCCIÓN)
+   Basado en el Framework fcoux.pd
+   ============================================================ */
+
+
+/* 1. IMPORTACIÓN DE BASE (Variables y Reset de index.css) */
+
+
+/* Nota: Se asume que este archivo carga después de index.css o contiene sus variables */
+
+:root {
+    --line-separator: rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode {
+    --line-separator: rgba(255, 255, 255, 0.12);
+}
+
+
+/* 2. HERO DE CONSTRUCCIÓN (Layout Específico) */
+
+.construction-hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 0 80px;
+    background: radial-gradient(circle at top, var(--surface-2) 0%, var(--bg) 100%);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--surface);
+    border-radius: 100px;
+    margin-bottom: 32px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.status-badge span:not(.pulse-dot) {
+    text-transform: none !important;
+    /* Anula cualquier herencia de uppercase */
+    font-weight: 500;
+    color: var(--text-soft);
+    letter-spacing: 0;
+    /* Quitamos el tracking ancho de las mayúsculas */
+}
+
+.pulse-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-dot::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse-ring 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.33);
+        opacity: 1;
+    }
+    80%,
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+
+/* 3. BARRA DE PROGRESO UX */
+
+.progress-container {
+    width: 100%;
+    max-width: 480px;
+    height: 8px;
+    background: var(--line);
+    border-radius: 20px;
+    margin: 40px auto 16px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 65%;
+    /* Nivel de documentación actual */
+    height: 100%;
+    background: var(--accent);
+    border-radius: 20px;
+    transition: width 1s ease-in-out;
+}
+
+
+/* 4. COMPONENTES DE CASO DE ESTUDIO (Heredados de Restaurantes/Ecosistema) */
+
+.section-wrapper {
+    width: 100%;
+    display: block;
+}
+
+.section-wrapper.border-top {
+    border-top: 1px solid var(--line-separator);
+}
+
+.section-content {
+    padding: 100px 0;
+}
+
+
+/* Grid de dos columnas para Preview */
+
+.two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+
+/* Listas con Side Color (Tu sello visual) */
+
+.highlight-list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.highlight-list li {
+    margin-bottom: 18px;
+    padding-left: 24px;
+    border-left: 2px solid var(--accent);
+    font-size: 1.1rem;
+    color: var(--text-soft);
+}
+
+.highlight-list li strong {
+    color: var(--text);
+}
+
+
+/* Placeholders para Wireframes en proceso */
+
+.image-placeholder {
+    background: var(--surface-2);
+    border: 2px dashed var(--line);
+    border-radius: var(--card-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-soft);
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* 5. RESPONSIVE ADJUSTMENTS */
+
+@media (max-width: 1024px) {
+    .two-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .construction-hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        padding: 60px 0;
+    }
+    .construction-hero {
+        padding: 80px 0;
+    }
+    .progress-container {
+        max-width: 85%;
+    }
+}
+
+
+/* 6. DARK MODE OVERRIDES (Específicos para este layout) */
+
+body.dark-mode .construction-hero {
+    background: radial-gradient(circle at top, var(--surface-2) 0%, var(--bg) 100%);
+}
+
+body.dark-mode .status-badge {
+    background: var(--surface-dark-card);
+}

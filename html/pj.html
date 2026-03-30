@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Journey | Francisco Orellana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/pj.css" />
+    <style>
+        /* Estilos específicos para el estado de construcción */
+        
+        .construction-hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--surface-2);
+            border-radius: 100px;
+            margin-bottom: 24px;
+            border: 1px solid var(--line-separator);
+        }
+        
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(234, 88, 12, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(234, 88, 12, 0);
+            }
+        }
+        
+        .progress-container {
+            width: 100%;
+            max-width: 400px;
+            height: 6px;
+            background: var(--line-separator);
+            border-radius: 10px;
+            margin: 32px auto;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            width: 65%;
+            /* Nivel de avance de la documentación */
+            height: 100%;
+            background: var(--accent);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo" aria-label="Inicio"><strong>fcoux</strong>.pd</a>
+            <nav class="nav-links desktop-nav" aria-label="Navegación principal">
+                <a href="../index.html#about">Resume</a>
+                <a href="../index.html#projects">Casos de Estudio</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema">
+                    <div class="theme-toggle-track">
+                        <div class="theme-toggle-thumb"></div>
+                    </div>
+                </button>
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#projects">Casos de Estudio</a></li>
+                <li aria-current="page">En Construcción</li>
+            </ol>
+        </div>
+    </nav>
+    <main>
+        <section class="construction-hero">
+            <div class="container">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-soft);">PROYECTO EN DOCUMENTACIÓN</span>
+                </div>
+
+                <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 24px;">Product Journey</h1>
+                <p style="max-width: 650px; margin: 0 auto; font-size: 1.25rem; color: var(--text-soft); line-height: 1.6;">
+                    Estamos sistematizando los hallazgos de la vida completa del producto POS bajo el ecosistema Haulmer.
+                    <strong>El caso de estudio estará disponible pronto.</strong>
+                </p>
+
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <p style="font-size: 0.9rem; color: var(--text-soft); text-transform: uppercase; letter-spacing: 0.1em;">
+                    Progreso: 65% completado
+                </p>
+
+                <div style="margin-top: 48px;">
+                    <a href="../index.html#projects" class="btn btn-secondary">Volver a Proyectos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-wrapper border-top bg-surface-2">
+            <div class="container section-content" style="padding: 80px 0;">
+                <div class="two-columns-grid" style="filter: grayscale(0.8); opacity: 0.7;">
+                    <div class="col-text">
+                        <span class="tag tag-primary">Upcoming</span>
+                        <h2 style="margin-top: 16px;">¿Qué incluiremos en este caso?</h2>
+                        <ul class="highlight-list">
+                            <li><strong>Blueprint de Servicio:</strong> Mapeo integral desde el onboarding hasta la post-venta.</li>
+                            <li><strong>Identificación de Gaps:</strong> Resolución de fricciones en el ciclo de vida POS.</li>
+                            <li><strong>Estrategia SaaS:</strong> Alineación del hardware con la plataforma de gestión.</li>
+                        </ul>
+                    </div>
+                    <div class="col-visual">
+                        <div class="image-placeholder" style="border-style: dashed;">
+                            <p>Visualizaciones en proceso...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section" id="contact">
+            <div class="container">
+                <h2>¿Quieres conocer los detalles antes?</h2>
+                <p style="max-width: 600px; font-size: 1.125rem; margin: 0 auto 32px; color: var(--text-soft);">
+                    Puedo adelantarte los resultados de este proyecto en una reunión personalizada.
+                </p>
+                <a href="mailto:orellanav.francisco@gmail.com" class="btn btn-primary">Hablemos por Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; border-top: 1px solid var(--line-separator); text-align: center;">
+        <div class="container">
+            <p style="color: var(--text-soft); font-size: 0.9rem; margin: 0;">
+                © 2026 Francisco Orellana — fcoux.pd. <br> Santiago, Chile.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
